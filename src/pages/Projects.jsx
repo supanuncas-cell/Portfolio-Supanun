@@ -222,7 +222,7 @@ export default function Projects() {
       </div>
 
       {/* Card grid */}
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {filtered.map((item, i) => (
           <ProjectCard key={i} item={item} />
         ))}
