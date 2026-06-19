@@ -193,7 +193,7 @@ export default function Experience() {
       </div>
 
       {/* Card grid */}
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {filtered.map((item, i) => (
           <ExperienceCard key={i} item={item} />
         ))}
