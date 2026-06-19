@@ -57,7 +57,7 @@ const stats = [
   { num: "2", label: "Publications", link: "#publications" },
   { num: "6", label: "Projects", link: "/projects" },
   { num: "3", label: "Years Research", link: "#research" },
-  { num: "4", label: "Experience", link: "/experience" },
+  { num: "6", label: "Experience", link: "/experience" },
 ]
 
 const interests = [
