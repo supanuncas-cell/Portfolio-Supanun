@@ -33,12 +33,12 @@ const availability = [
 ];
 
 const lookingFor = [
+  "Data Analysis",
   "Signal Processing Engineer",
   "Embedded Systems Engineer",
   "Hardware Engineer",
   "R&D Engineer",
   "PCB Design",
-  "Data Analysis"
 ];
 
 export default function Contact() {
