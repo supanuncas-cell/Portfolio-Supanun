@@ -61,7 +61,7 @@ export default function Contact() {
         </h1>
       </div>
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {/* ── Left: Contact info ── */}
         <div className="bg-white border border-[#e8e6e1] rounded-2xl p-5 flex flex-col gap-4">
           <p className="font-mono text-[10px] text-neutral-300 uppercase tracking-widest">
