@@ -66,8 +66,8 @@ const interests = [
 ]
 
 const education = [
-  { deg: "B.Eng Biomedical Engineering", school: "Srinakharinwirot University", year: "2021 – 2025" },
-  { deg: "M.Eng Biomedical Engineering", school: "Srinakharinwirot University", year: "2025 - 2026" },
+  { deg: "B.Eng Biomedical Engineering", school: "Srinakharinwirot University (GPAX: 4.00)", year: "2021 – 2025" },
+  { deg: "M.Eng Biomedical Engineering", school: "Srinakharinwirot University (GPAX: 3.65)", year: "2025 - 2026" },
 ]
 
 const recentPubs = [
