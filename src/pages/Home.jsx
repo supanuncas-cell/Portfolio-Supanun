@@ -54,10 +54,10 @@ const categoryColor = {
 }
 
 const stats = [
-  { num: "2", label: "Publications" },
-  { num: "6", label: "Projects" },
-  { num: "3", label: "Years Research" },
-  { num: "4", label: "Experience" },
+  { num: "2", label: "Publications", link: "#publications" },
+  { num: "6", label: "Projects", link: "/projects" },
+  { num: "3", label: "Years Research", link: "#research" },
+  { num: "4", label: "Experience", link: "/experience" },
 ]
 
 const interests = [
@@ -160,17 +160,32 @@ export default function Home() {
     <>
     {/* Hero */}
     <section className="pt-14 pb-9 border-b border-[#ece9e2] mb-7">
+
       {/* ใช้ flex เพื่อแบ่งซ้าย-ขวา */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
         
         {/* ฝั่งซ้าย: ข้อมูลตัวอักษรและปุ่ม */}
-        <div className="flex-1">
+        <div className="flex-1 min-w-0">
+
           <p className="font-mono text-[14px] text-neutral-500 uppercase tracking-widest mb-4">
             Biomedical Engineering
           </p>
+
           <h1 className="text-[40px] md:text-[52px] font-light tracking-[-0.04em] leading-tight text-neutral-900 mb-4">
             Supanun Chitmeta
           </h1>
+
+          {/* รูปภาพ: โผล่เฉพาะมือถือ อยู่ตรงนี้ */}
+          <div className="flex justify-center mb-6 md:hidden">
+            <div className="w-32 h-32 rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200">
+              <img 
+                src="/Profile_pic.jpg"
+                alt="Supanun Chitmeta"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
           <p className="text-[14.5px] text-neutral-500 max-w-[500px] leading-relaxed mb-6">
             Hi, I'm Cream, a Biomedical Engineering Master's graduate and a first-job seeker. 
             I'm passionate about Data Analysis and Signal Processing and excited to start my career in these fields.
@@ -209,10 +224,10 @@ export default function Home() {
         </div>
 
         {/* ฝั่งขวา: รูปภาพ */}
-        <div className="flex-shrink-0">
-          <div className="w-32 h-32 md:w-48 md:h-48 rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200">
+        <div className="hidden md:block flex-shrink-0">
+          <div className="w-48 h-48 rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200">
             <img 
-              src="/Profile_pic.jpg" // ใส่ path รูปของคุณตรงนี้
+              src="/Profile_pic.jpg"
               alt="Supanun Chitmeta"
               className="w-full h-full object-cover"
             />
@@ -223,13 +238,38 @@ export default function Home() {
     </section>
 
       {/* Stats */}
-      <div className="grid grid-cols-4 gap-2.5 mb-6">
-        {stats.map(({ num, label }) => (
-          <Card key={label}>
-            <p className="text-[28px] font-light tracking-tight leading-none text-neutral-900">{num}</p>
-            <p className="text-[11px] text-neutral-300 mt-1">{label}</p>
-          </Card>
-        ))}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-6">
+        {stats.map(({ num, label, link }) => {
+          const content = (
+            <Card className={link ? "hover:-translate-y-0.5 hover:border-neutral-300 transition-all cursor-pointer" : ""}>
+              <p className="text-[28px] font-light tracking-tight leading-none text-neutral-900">{num}</p>
+              <p className="text-[11px] text-neutral-300 mt-1">{label}</p>
+            </Card>
+          );
+
+          if (!link) return <div key={label}>{content}</div>
+
+          if (link.startsWith("#")) {
+            return (
+              <a
+                key={label}
+                href={link}
+                onClick={(e) => {
+                  e.preventDefault()
+                  document.getElementById(link.slice(1))?.scrollIntoView({ behavior: "smooth" })
+                }}
+              >
+                {content}
+              </a>
+            )
+          }
+
+          return (
+            <Link key={label} to={link}>
+              {content}
+            </Link>
+          );
+        })}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 mb-7">
@@ -348,9 +388,9 @@ export default function Home() {
           <p className="text-[13px] font-medium">Selected projects</p>
           <Link to="/projects" className="text-[12px] text-neutral-300 hover:text-blue-600 transition-colors">See all →</Link>
         </div>
-        <div className="grid grid-cols-3 gap-2.5">
+        <div className="flex md:grid md:grid-cols-3 gap-2.5 overflow-x-auto pb-2 -mx-4 px-4 md:mx-0 md:px-0 md:overflow-visible scrollbar-hide">
           {recentProjects.map((p) => (
-            <Link key={p.name} to="/projects">
+            <Link key={p.name} to="/projects" className="flex-shrink-0 w-[80%] sm:w-[280px] md:w-auto">
               <Card className="hover:-translate-y-0.5 hover:border-neutral-300 transition-all cursor-pointer h-full">
                 <p className="font-mono text-[10px] text-neutral-300 uppercase tracking-widest mb-1.5">{p.type}</p>
                 <p className="text-[12.5px] font-medium leading-snug mb-1.5">{p.name}</p>
@@ -374,9 +414,9 @@ export default function Home() {
         See all →
         </Link>
       </div>
-      <div className="grid grid-cols-3 gap-2.5">
+      <div className="flex md:grid md:grid-cols-3 gap-2.5 overflow-x-auto pb-2 -mx-4 px-4 md:mx-0 md:px-0 md:overflow-visible scrollbar-hide">
         {recentExperiences.map((e) => (
-          <Link key={e.role} to="/experience">
+          <Link key={e.role} to="/experience" className="flex-shrink-0 w-[80%] sm:w-[280px] md:w-auto">
             <Card className="hover:-translate-y-0.5 hover:border-neutral-300 transition-all cursor-pointer h-full">
               <div className="flex items-start justify-between gap-2 mb-2">
                 <span className={`font-mono text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-full font-medium ${categoryColor[e.category]}`}>
