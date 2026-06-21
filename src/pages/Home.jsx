@@ -168,7 +168,7 @@ export default function Home() {
         <div className="flex-1 min-w-0">
 
           <p className="font-mono text-[14px] text-neutral-500 uppercase tracking-widest mb-4">
-            Biomedical Engineering
+            Biomedical Engineering | Data Analysis | Signal Processing  | Researcher 
           </p>
 
           <h1 className="text-[40px] md:text-[52px] font-light tracking-[-0.04em] leading-tight text-neutral-900 mb-4">
@@ -187,8 +187,7 @@ export default function Home() {
           </div>
 
           <p className="text-[14.5px] text-neutral-500 max-w-[500px] leading-relaxed mb-6">
-            Hi, I'm Cream, a Biomedical Engineering Master's graduate and a first-job seeker. 
-            I'm passionate about Data Analysis and Signal Processing and excited to start my career in these fields.
+            Hi, I'm Cream. 
           </p>
           
           {/* กลุ่มปุ่มกด */}
