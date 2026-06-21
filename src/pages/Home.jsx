@@ -167,7 +167,7 @@ export default function Home() {
         {/* ฝั่งซ้าย: ข้อมูลตัวอักษรและปุ่ม */}
         <div className="flex-1 min-w-0">
 
-          <p className="font-mono text-[14px] text-neutral-500 uppercase tracking-widest mb-4">
+          <p className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest mb-4">
             Biomedical Engineering | Data Analysis | Signal Processing  | Researcher 
           </p>
 
