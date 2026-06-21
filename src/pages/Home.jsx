@@ -187,7 +187,8 @@ export default function Home() {
           </div>
 
           <p className="text-[14.5px] text-neutral-500 max-w-[500px] leading-relaxed mb-6">
-            Hi, I'm Cream. 
+            Hi, I'm Cream. I'm currently seeking opportunities in Data Analysis, Biomedical Signal Processing, Research, 
+            and Medical Device-related roles.
           </p>
           
           {/* กลุ่มปุ่มกด */}
