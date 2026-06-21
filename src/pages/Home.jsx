@@ -281,21 +281,21 @@ export default function Home() {
             <MonoLabel>About</MonoLabel>
             <p className="text-[13px] font-medium mb-2 mt-2">Background</p>
             <p className="text-[12.5px] text-neutral-500 leading-[1.75] text-justify whitespace-pre-line">
-              Hello, my name is Cream. I graduated with a Master's degree 
+              &nbsp;&nbsp;&nbsp;&nbsp;Hello, my name is Cream. I graduated with a Master's degree 
               in Biomedical Engineering from Srinakharinwirot University.
             </p>
             <p className="text-[12.5px] text-neutral-500 leading-[1.75] mt-1 text-justify whitespace-pre-line">
-              During my studies, I conducted research in biomedical signal processing, 
+              &nbsp;&nbsp;&nbsp;&nbsp;During my studies, I conducted research in biomedical signal processing, 
               which involved data collection, algorithm development, data analysis, and statistical evaluation. 
               Through this experience, I developed strong skills in signal processing, data analysis, and systematic problem-solving.
             </p>
             <p className="text-[12.5px] text-neutral-500 leading-[1.75] mt-1 text-justify whitespace-pre-line">
-              I enjoy learning new things, paying attention to detail, and working with data to find 
+              &nbsp;&nbsp;&nbsp;&nbsp;I enjoy learning new things, paying attention to detail, and working with data to find 
               meaningful insights and solutions. I am also motivated to continuously improve my knowledge and skills through 
               both learning and hands-on experience.
             </p>
             <p className="text-[12.5px] text-neutral-500 leading-[1.75] mt-1 text-justify whitespace-pre-line">
-              I am interested in opportunities related to Data Analysis, Signal Processing, 
+              &nbsp;&nbsp;&nbsp;&nbsp;I am interested in opportunities related to Data Analysis, Signal Processing, 
               and medical technology or medical devices. I look forward to applying my engineering background, analytical skills, 
               and research experience to contribute to an organization while continuing to grow professionally.
             </p>
